@@ -1,0 +1,276 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+body{
+    font-size:1em;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 500;
+    min-width: 480px;
+    margin:0 5px;
+    background-color: whitesmoke;
+    scroll-behavior: smooth;
+}
+/*Header*/
+header{
+    z-index: 2;
+    background-color: #ffffff;
+    width: 100%;
+    margin:0px 0px 5px 0px;
+    padding-left:5px;
+    display:flex;
+    justify-content: space-between;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0,0.5);
+    position: fixed;
+}
+header>h1{
+    color:rgb(23, 23, 82);
+    cursor:pointer;
+}
+.space{
+    height:40px;
+}
+/*Nav List & Dropdown list*/
+header>nav>.menu>.menu-item,header>nav>.menu>.menu-item>.dropdown>.dropdown-item{
+    list-style:none;
+    display: inline-block;
+    width:100px;
+    margin:10px auto;
+    text-align:center;
+    position: relative;
+}
+header>nav>.menu>.menu-item>.dropdown{
+    display:none;
+    z-index: 2;
+    border-radius:10px;
+    background-color:white;
+    position:absolute;
+    box-shadow: 2px 2px 4px rgba(0, 0, 0,0.5);
+}
+header>nav>.menu>.menu-item:hover>.dropdown{
+    display:block;
+}
+header>nav>.menu>.menu-item>a{
+    color:rgb(23, 23, 82);
+    text-decoration:none;
+    cursor:pointer;
+}
+header>nav>.menu>.menu-item>.dropdown>.dropdown-item>a{
+    text-decoration: none;
+    color:rgb(23, 23, 82);
+}
+/*Menu Icon*/
+header>.container{
+    cursor: pointer;
+    margin:0;
+    padding:0;
+    width: 50px;
+}
+/*Side Bar*/
+.side{
+    z-index: 3;
+    background-color:rgba(0, 0, 0,0.5);
+    width:100%;
+    height:100%;
+    position:fixed;
+    top:0;
+    left:0;
+    display:none;
+}
+.side>.sidebar{
+    background-color: black;
+    width:40%;
+    height:100%;
+    margin-left:60%;
+    border-radius: 10px 0 0 10px;
+}
+.side>.sidebar>span{
+    color:white;
+    font-size: 25px;
+    float:right;
+    margin-right:5px;
+    cursor:pointer;
+}
+.side>.sidebar>.sidebar-menu>.sidebar-item{
+    list-style:none;
+    width:150px;
+    height:50px;
+    line-height:50px;
+    margin-left:10px;
+}
+.side>.sidebar>.sidebar-menu>.sidebar-item>a{
+    color:white;
+    text-decoration:none;
+    cursor:pointer;
+}
+.side>.sidebar>.sidebar-menu>hr{
+    width:80%;
+    margin:0 auto;
+}
+/*Photo of frontpage*/
+.front-page{
+    background-image: url("image/demon_slayer.jpg");
+    background-size:cover;
+    position: relative;
+    width:40%;
+    height:300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.front-page>.describtion{
+    width: 300px;
+}
+.front-page>.describtion>p{
+    color:white;
+    line-height:1.4;
+    font-size: 1.3em;
+}
+/*Anime Section*/
+h2.popular{
+    margin: 10px;
+    color: rgb(23, 23, 82);
+}
+.anime-section{
+    margin:2px 4px;
+    display:flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width:100%;
+}.anime-section>.popular-link{
+    text-decoration: none;
+    cursor:auto;
+}
+.anime-section>.popular-link>.anime-item{
+    padding-bottom:5px;
+    width:100px;
+    height:200px;
+    border-radius: 10px;
+    box-shadow:2px 2px 10px black,-2px 2px 10px white;
+    text-align: center;
+    overflow: hidden;
+    margin: 5px;
+}
+.anime-section>.popular-link>.anime-item>img{
+    width:100px;
+    height:150px;
+    border-radius: 10px 10px 0px 0px;
+}
+.anime-section>.popular-link>.anime-item>span{
+    font-size:1em;
+    line-height: 1.3;
+    color: rgb(23, 23, 82);
+}
+/*Footer*/
+footer{
+    width:100%;
+    height:50px;
+    background-color: rgb(23, 23, 82);
+    text-align: center;
+    display: flex;
+    justify-content: space-around;
+    margin:0;
+}
+footer>.footer-link{
+    line-height: 50px;
+    color: white;
+    text-decoration: none;
+}
+/*anime information and download link*/
+.body-path{
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    width: 100%;
+}
+.body-path>.anime-info>img{
+    width:120px;
+    height:180px;
+    margin-right:10px;
+}
+.body-path>.anime-info{
+    display:flex;
+    width:350px;
+    height: 200px;
+    min-width: 320px;
+    margin-bottom: 10px;
+    margin-right: 10px;
+}
+.body-path>.anime-info>.info{
+    display: inline-table;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    color: rgb(23, 23, 82);
+}
+.body-path>.description-paragraph{
+    width:480px;
+    min-width:320px;
+    height: 320px;
+    margin: 7px;
+}
+.body-path>.description-paragraph>h3,.body-path>.link-box>h3{
+    color:rgb(23, 23, 82);
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.body-path>.description-paragraph>p{
+    text-indent: 60px;
+    font-size: 1rem;
+    word-spacing: 3px;
+    line-height: 1.5;
+    font-weight:lighter;
+    color: rgb(23, 23, 82);
+}
+.body-path>.link-box{
+    width: 470px;
+    height:200px;
+    min-width: 320px;
+    border: 1px solid black;
+    margin:5px 8px;
+}
+.body-path>.link-box>.link{
+    width:97%;
+    margin:5px auto;
+    height:170px;
+    overflow-y: scroll;
+}
+.body-path>.link-box>.link>a{
+    display:inline-block;
+    width:100%;
+    height: 25px;
+    background-color:rgb(204, 201, 201);
+    color: rgb(23, 23, 82);
+    border: 0.25px solid black;
+    padding-left:10px;
+    padding-top:2px;
+    margin-bottom: 2px;
+    text-decoration:none;
+    border-radius: 5px;
+}
+@media screen and (max-width:736px){
+    header>nav>.menu>.menu-item{
+        display: none;
+    }
+    .front-page{
+        width:100%;
+    }
+}
+@media screen and (max-width:320px){
+    .front-page{
+        width:100%;
+    }
+    .front-page>.describtion>p{
+        font-size: 1em;
+    }
+}
+@media screen and (min-width:736px){
+    header>div,.side>.sidebar{
+        display:none;
+    }
+    .side{
+        position:unset;
+    }
+}
